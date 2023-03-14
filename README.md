@@ -1,4 +1,4 @@
-#TAP Resource Request Remover
+# TAP Resource Request Remover
 
 TAP Overlay set to remove all TAP constituent package K8s deployment resource requests.
 
@@ -7,7 +7,7 @@ TAP comes with predefined CPU and Memory resource requests/reservations, set for
 Removing all TAP component k8s deployment cpu/memory requests reduces demands on cluster by as much as 50% in preliminary testing.
 
 
-###How it works
+### How it works
 
 reqfix.sh creates a k8s secret (reqfix-secret) that will be made availble to the tap package as an overlay definition via addition of an annotation to its packageInstall.
 
