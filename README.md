@@ -1,5 +1,8 @@
 # TAP Resource Request Remover
 
+![image](https://user-images.githubusercontent.com/6810491/225349273-2b7edb69-87bf-4d26-949b-44529d003996.png)
+
+
 TAP Overlay set to remove all TAP constituent package K8s deployment resource requests.
 
 TAP comes with predefined CPU and Memory resource requests/reservations, set for production workload QoS. This can be overkill for functional demo environments.
