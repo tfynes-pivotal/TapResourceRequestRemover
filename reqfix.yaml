@@ -8,7 +8,9 @@ metadata:
 stringData:
   patch.yml: |
     #@ load("@ytt:overlay", "overlay")
-    #@overlay/match by=overlay.subset({"kind":"Deployment"}), expects="0+"
+    #@ deployments = overlay.subset({"kind":"Deployment"})
+    #@ daemonsets =  overlay.subset({"kind":"DaemonSet"})
+    #@overlay/match by=overlay.or_op(deployments, daemonsets), expects="0+"
     ---
     spec:
       template:
@@ -19,6 +21,7 @@ stringData:
             #@overlay/match missing_ok=True 
             #@overlay/remove
             resources:
+
 
 #@overlay/match by=overlay.subset({"kind":"PackageInstall"}), expects="0+"
 ---
@@ -35,3 +38,4 @@ metadata:
   annotations:
     #@overlay/remove
     kapp.k14s.io/versioned: 
+
