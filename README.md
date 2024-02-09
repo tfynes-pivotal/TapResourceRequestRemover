@@ -25,7 +25,7 @@ yaml file containing the reqfix-overlay-secret, the overlay to update tap constu
 
 
 TAP Update - tap values yaml now support specification of the
-overlay yaml at a per-package level. Example below directly applies the overlay to the constituent packages in a full-profile TAP deployment
+overlay yaml at a per-package level. Example below directly applies the overlay to the constituent packages in a full-profile TAP deployment. This negates the need to modify PackageInstall CRs (so line 26 onward of the reqfix.yaml can be removed)
 
 ```
 package_overlays:
