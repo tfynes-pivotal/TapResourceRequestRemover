@@ -27,7 +27,8 @@ yaml file containing the reqfix-overlay-secret, the overlay to update tap constu
 TAP Update - tap values yaml now support specification of the
 overlay yaml at a per-package level. Example below directly applies the overlay to the constituent packages in a full-profile TAP deployment
 
-`package_overlays:
+```
+package_overlays:
 - name: api-portal
 secrets:
 - name: api-portal-cm-tls-overlay-secret
@@ -120,4 +121,5 @@ secrets:
 - name: reqfix-overlay-secret
 - name: tekton-pipelines
 secrets:
-- name: reqfix-overlay-secret`
+- name: reqfix-overlay-secret
+```
